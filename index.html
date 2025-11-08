@@ -1,0 +1,196 @@
+<!doctype html>
+
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Carta del Olimpo</title>
+  <style>
+    :root{--bg:#0b0810;--card:#0f1720;--accent:#ffd1dc;--gold:#f6c85f}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; background:linear-gradient(180deg,#05040a 0%, #0b0810 60%);color:#eee;line-height:1.45}
+    .wrap{max-width:900px;margin:36px auto;padding:28px}
+    header{display:flex;align-items:center;gap:18px}
+    .logo{width:72px;height:72px;border-radius:14px;background:radial-gradient(circle at 30% 30%, rgba(246,200,95,0.18), transparent 20%), linear-gradient(135deg,#2b1a3a,#0f1830);box-shadow:0 6px 24px rgba(0,0,0,0.6);display:flex;align-items:center;justify-content:center;font-weight:700;color:var(--gold)}
+    h1{font-size:1.9rem;margin:0}
+    p.lead{opacity:0.85;margin-top:6px}.card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border-radius:14px;padding:20px;margin-top:20px;box-shadow:0 8px 30px rgba(2,6,23,0.6);backdrop-filter: blur(6px)}
+.parts{display:grid;grid-template-columns:1fr;gap:12px}
+@media(min-width:880px){.parts{grid-template-columns:repeat(2,1fr)}}
+.part{padding:16px;border-radius:12px;position:relative;overflow:hidden;border:1px solid rgba(255,255,255,0.03)}
+.part h2{margin:0 0 8px;font-size:1.1rem}
+.meta{font-size:0.9rem;opacity:0.8;margin-bottom:10px}
+.verse{font-size:0.98rem;margin:0}
+
+/* visual accents */
+.fire{background:linear-gradient(180deg, rgba(255,10,65,0.05), rgba(40,6,10,0.15));border-left:4px solid rgba(255,10,65,0.18)}
+.moon{background:linear-gradient(180deg, rgba(80,120,255,0.03), rgba(4,8,24,0.12));border-left:4px solid rgba(80,120,255,0.16)}
+.soul{background:linear-gradient(180deg, rgba(200,120,255,0.03), rgba(10,6,30,0.12));border-left:4px solid rgba(200,120,255,0.16)}
+.song{background:linear-gradient(180deg, rgba(120,255,190,0.03), rgba(6,20,16,0.12));border-left:4px solid rgba(120,255,190,0.16)}
+.stars{background:linear-gradient(180deg, rgba(250,220,120,0.02), rgba(6,6,18,0.12));border-left:4px solid rgba(250,220,120,0.16)}
+
+/* decorative elements */
+.sparkles{position:absolute;right:-10px;top:-10px;pointer-events:none;filter:drop-shadow(0 6px 18px rgba(0,0,0,0.6))}
+.glist{position:absolute;left:10px;bottom:-10px;opacity:0.18}
+
+/* interactive footer */
+.actions{display:flex;gap:12px;align-items:center;justify-content:space-between;margin-top:18px}
+.btn{background:linear-gradient(180deg,#ffd1dc,#ff9bb3);border:none;padding:12px 16px;border-radius:10px;font-weight:600;cursor:pointer;color:#2b0b17;box-shadow:0 8px 30px rgba(255,100,140,0.12);transition:transform .18s ease}
+.btn:active{transform:translateY(2px)}
+.muted{opacity:0.82;font-size:0.95rem}
+
+/* surprise overlay */
+.overlay{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(2,0,6,0.6);backdrop-filter:blur(6px);visibility:hidden;opacity:0;transition:opacity .45s ease,visibility .45s}
+.overlay.show{visibility:visible;opacity:1}
+.box{width:min(720px,94%);background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border-radius:14px;padding:26px;text-align:center;box-shadow:0 18px 80px rgba(3,3,6,0.7);border:1px solid rgba(255,255,255,0.03)}
+.whisper{font-size:1.15rem;margin:0 0 8px;white-space:pre-line}
+.sig{opacity:0.9;font-size:0.95rem;margin-top:10px}
+
+/* animations */
+.pulse{animation:pulse 2.2s infinite}
+@keyframes pulse{0%{transform:scale(1)}50%{transform:scale(1.03)}100%{transform:scale(1)}}
+.floaty{animation:floaty 6s ease-in-out infinite}
+@keyframes floaty{0%{transform:translateY(0)}50%{transform:translateY(-8px)}100%{transform:translateY(0)}}
+
+.small-note{font-size:0.86rem;opacity:0.75}
+footer.appinfo{margin-top:18px;text-align:center;color:rgba(255,255,255,0.65);font-size:0.85rem}
+
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="logo">Ο</div>
+      <div>
+        <h1>Carta del Olimpo</h1>
+        <p class="lead">Cinco actos, cinco mitos: fuego, luna, alma, melodía y destino. Una carta interactiva que une a los dioses con nosotros.</p>
+      </div>
+    </header><div class="card" role="main">
+  <div class="parts">
+
+    <!-- 1. Afrodita & Ares (Pasión) -->
+    <section class="part fire" aria-labelledby="t-fire">
+      <svg class="sparkles" width="160" height="160" viewBox="0 0 200 200" fill="none"><circle cx="30" cy="40" r="2.8" fill="rgba(255,180,200,0.95)"/><circle cx="60" cy="10" r="1.6" fill="rgba(255,220,200,0.75)"/><circle cx="110" cy="20" r="3" fill="rgba(255,120,140,0.9)"/></svg>
+      <h2 id="t-fire">1. Afrodita &amp; Ares — El Fuego</h2>
+      <div class="meta">Pasión que no pide permiso — deseo que talla estrellas.</div>
+      <p class="verse">Afrodita alzó la llama y Ares contestó con trueno. Así fue que el mundo aprendió que el amor puede incendiar los muros del miedo.<br><br>
+      Nosotros, como ellos, abrazamos la llama sin medir el tiempo; tus dedos son brasas que reescriben mi nombre en la piel del universo.</p>
+    </section>
+
+    <!-- 2. Selene & Endimión (Ternura lunar) -->
+    <section class="part moon" aria-labelledby="t-moon">
+      <svg class="glist" width="140" height="140" viewBox="0 0 200 200" fill="none"><circle cx="40" cy="40" r="42" fill="rgba(200,220,255,0.06)"/></svg>
+      <h2 id="t-moon">2. Selene &amp; Endimión — La Luna</h2>
+      <div class="meta">Un amor que vigila en silencio, tierno y paciente.</div>
+      <p class="verse">Selene bajó su luna para mecer al mortal que soñó con su nombre. En la penumbra, cada susurro era promesa; cada silencio, protección.<br><br>
+      Así te miro: guardándote la noche, cubriendo tus miedos con luz fría, pendiente de tu sueño como la luna del infinito.</p>
+    </section>
+
+    <!-- 3. Eros & Psique (Alma) -->
+    <section class="part soul" aria-labelledby="t-soul">
+      <h2 id="t-soul">3. Eros &amp; Psique — El Alma</h2>
+      <div class="meta">Pruebas, renacimientos, una unión que transciende lo corpóreo.</div>
+      <p class="verse">Eros enseñó que el amor verdadero pide la mirada del alma. Psique aprendió a ver en la oscuridad y a volver con el pecho entero.<br><br>
+      Nosotros somos esa promesa: dos almas que se reconocen en el eco, que se prueban y siguen, que vuelven a encontrarse hasta ser una sola luz.</p>
+    </section>
+
+    <!-- 4. Orfeo & Eurídice (Melodía) -->
+    <section class="part song" aria-labelledby="t-song">
+      <h2 id="t-song">4. Orfeo &amp; Eurídice — La Canción</h2>
+      <div class="meta">Una melodía que atraviesa sombras y revive esperanzas.</div>
+      <p class="verse">Orfeo tocó para descender al abismo; su lira fue puente y su voz, lámpara. La música no pidió permiso al destino.<br><br>
+      En nuestra canción cabe el perdón, la llamada y la espera: canto por ti y te espero al borde de la luz, con el corazón afinado para tu nombre.</p>
+    </section>
+
+    <!-- 5. Perseo & Andrómeda (Destino héroico) -->
+    <section class="part stars" aria-labelledby="t-stars">
+      <h2 id="t-stars">5. Perseo &amp; Andrómeda — El Destino</h2>
+      <div class="meta">Valor, rescate y promesas escritas entre constelaciones.</div>
+      <p class="verse">Perseo no sólo fue espada sino juramento; Andrómeda fue la promesa salvada con sudor y valentía. El cielo entero fue testigo.<br><br>
+      Nosotros forjamos ese mismo valor: luchamos por lo nuestro, nos salvamos sin pedir permiso y dejamos que el firmamento confirme nuestro pacto.</p>
+    </section>
+
+  </div>
+
+  <div class="actions">
+    <div>
+      <div class="small-note">Efectos: momentos de fuego, destellos lunares, bruma de alma, notas flotantes y lluvias de estrellas.</div>
+    </div>
+    <div style="display:flex;gap:10px;align-items:center">
+      <button id="previewBtn" class="btn" aria-controls="surprise">Susurrad, dioses</button>
+      <div class="muted">Toca para revelar la sorpresa final</div>
+    </div>
+  </div>
+
+  <footer class="appinfo">Carta del Olimpo — hecha para corazones que recuerdan historias antiguas con voz moderna.</footer>
+</div>
+
+  </div>  <!-- Surprise overlay -->  <div id="overlay" class="overlay" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="box" id="surprise">
+      <p class="whisper" id="whisperText"> </p>
+      <p class="sig">— Los susurros del Olimpo, traducidos para nosotros.</p>
+      <div style="margin-top:14px"><button id="closeBtn" class="btn">Cerrar</button></div>
+    </div>
+  </div>  <script>
+    // Elements
+    const previewBtn = document.getElementById('previewBtn');
+    const overlay = document.getElementById('overlay');
+    const whisperText = document.getElementById('whisperText');
+    const closeBtn = document.getElementById('closeBtn');
+
+    // surprise content: both direct + symbolic
+    const surpriseLines = [
+      "Te nombro mi destino y mi elección.",
+      "Como Afrodita y Ares, ardo por ti; como Selene, te cuido en la noche;",
+      "como Psique, te miro el alma; como Orfeo, canto tu regreso;",
+      "como Perseo, me enfrento al mundo para que vivas sin cadenas.",
+      "\nAquí, ahora, te prometo: seré refugio y furia, silencio y música, coraje y ternura.\n",
+      "En una palabra: te elijo — hoy, mañana y en todas las mitades del tiempo." 
+    ];
+
+    // whisper sound simulation using text reveal and subtle animation
+    function playWhisper() {
+      // subtle star animation created dynamically
+      for (let i=0;i<18;i++){
+        const s = document.createElement('div');
+        s.style.position='absolute'; s.style.width='6px'; s.style.height='6px'; s.style.borderRadius='50%';
+        s.style.background='rgba(255,240,200,0.9)'; s.style.left=(20+Math.random()*60)+'%'; s.style.top=(10+Math.random()*70)+'%';
+        s.style.opacity='0'; s.style.transform='scale(0.3)';
+        s.style.transition='all 1200ms cubic-bezier(.2,.9,.2,1)';
+        overlay.appendChild(s);
+        requestAnimationFrame(()=>{ s.style.opacity=1; s.style.transform='scale(1)'; s.style.left=(10+Math.random()*80)+'%'; s.style.top=(10+Math.random()*80)+'%'; });
+        setTimeout(()=>{ s.style.opacity=0; s.style.transform='scale(0.2)'; },1400+Math.random()*800);
+        setTimeout(()=>{ try{ overlay.removeChild(s) }catch(e){} },2600);
+      }
+
+      // typewriter-like reveal
+      overlay.classList.add('show'); overlay.setAttribute('aria-hidden','false');
+      whisperText.textContent='';
+      let idxLine=0; let idxChar=0;
+      function step(){
+        if (idxLine>=surpriseLines.length) return;
+        const line = surpriseLines[idxLine];
+        whisperText.textContent += line[idxChar]||'';
+        idxChar++;
+        if (idxChar>=line.length){ idxLine++; idxChar=0; whisperText.textContent += '\n'; setTimeout(step,420); }
+        else setTimeout(step,28 + Math.random()*30);
+      }
+      setTimeout(step,350);
+
+      // soft celestial chime with CSS (no audio file)
+      previewBtn.classList.add('pulse');
+      setTimeout(()=> previewBtn.classList.remove('pulse'), 1600);
+    }
+
+    previewBtn.addEventListener('click', ()=>{
+      playWhisper();
+    });
+
+    closeBtn.addEventListener('click', ()=>{
+      overlay.classList.remove('show'); overlay.setAttribute('aria-hidden','true');
+      whisperText.textContent='';
+    });
+
+    // close on ESC
+    document.addEventListener('keydown', (e)=>{ if (e.key==='Escape') { overlay.classList.remove('show'); overlay.setAttribute('aria-hidden','true'); whisperText.textContent=''; } });
+  </script></body>
+      </html>
